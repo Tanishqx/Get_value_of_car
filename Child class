@@ -15,5 +15,17 @@ class Car(Vehicle):
         age=Vehicle.current_year - self.model
         print("This is child override method")
         return Vehicle.base_price*(1/age)
-    
-  
+
+
+"""now create different object & call them""
+  obj1=Car("Tesla",2020,"EV",True,True)
+
+#To see objects of a class
+obj1.__dict__
+
+#Call the function  ; this will get child method because polymorphism overrides parent method with child method
+obj1.get_value()
+
+#to call parent method
+parentobj= Vehicle("Ford",2018,"petrol")
+parentobj.get_value()
