@@ -1,0 +1,16 @@
+#parent class
+class Vehicle():
+    current_year=2023
+    base_price=1200000
+    def __init__(self,make,model,fuel):
+        self.make= make
+        self.model =model
+        self.fuel = fuel
+   
+        
+    #default function to get value of car
+    def get_value(self):
+        age= Vehicle.current_year-self.model
+        print("This is default method")
+        return Vehicle.base_price*(1/age)
+    
