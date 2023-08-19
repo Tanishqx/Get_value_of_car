@@ -1,0 +1,19 @@
+#child class
+class Car(Vehicle):
+    def __init__(self,make,model,fuel,ac,sunroof):
+        super(Car,self).__init__(make,model,fuel)
+        #Vehicle.make = make
+        #Vehicle.model=model
+        #Vehicle.fuel =fuel
+        
+        self.ac=ac
+        self.sunroof=sunroof
+        
+    #overriding method - replaces the parent default method
+    def get_value(self):
+        Vehicle.base_price=5000000
+        age=Vehicle.current_year - self.model
+        print("This is child override method")
+        return Vehicle.base_price*(1/age)
+    
+  
